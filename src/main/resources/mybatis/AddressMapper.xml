@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hyeseo.boot.mapper.AddressMapper">
+    <select id="list" resultType="hyeseo.boot.domain.Address">
+        select * from ADDRESS order by SEQ desc
+    </select>
+    <insert id="insert" parameterType="hyeseo.boot.domain.Address">
+        insert into ADDRESS(NAME, ADDR, RDATE) values(#{name}, #{addr}, now())
+    </insert>
+    <delete id="delete" parameterType="long">
+        delete from ADDRESS where SEQ=#{seq}
+    </delete>
+</mapper>

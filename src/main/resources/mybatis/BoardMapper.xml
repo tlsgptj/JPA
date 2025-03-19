@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hyeseo.boot.mapper.BoardMapper">
+    <select id="getAllBoards" resultType="hyeseo.boot.domain.Board">
+        SELECT * FROM BOARD ORDER BY SEQ DESC
+    </select>
+
+    <select id="getBoardBySeq" parameterType="Long" resultType="hyeseo.boot.domain.Board">
+        SELECT * FROM BOARD WHERE SEQ = #{seq}
+    </select>
+
+    <insert id="insertBoard" parameterType="hyeseo.boot.domain.Board">
+        INSERT INTO BOARD (WRITER, EMAIL, SUBJECT, CONTENT, RDATE, UDATE)
+        VALUES (#{writer}, #{email}, #{subject}, #{content}, NOW(), NOW())
+    </insert>
+
+    <update id="updateBoard" parameterType="hyeseo.boot.domain.Board">
+        UPDATE BOARD
+        SET WRITER = #{writer}, EMAIL = #{email}, SUBJECT = #{subject},
+            CONTENT = #{content}, UDATE = NOW()
+        WHERE SEQ = #{seq}
+    </update>
+
+    <delete id="deleteBoard" parameterType="Long">
+        DELETE FROM BOARD WHERE SEQ = #{seq}
+    </delete>
+</mapper>
