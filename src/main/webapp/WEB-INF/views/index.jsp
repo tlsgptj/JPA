@@ -6,6 +6,7 @@
     <a href="address/list.do">주소록(JDBC)</a>
     <a href="address_jt/list.do">주소록(JDBCTemplate|Spring|MyBatis|JPA)</a>
     <a href="th/address_jt/list">주소록(JDBC:타임리프)</a>
+    <a href="file/upload.do">파일폼</a><br/>
 
     <a href="th/address_jt/list.do">주소록(JDBC:타임리프)</a>
 </body>

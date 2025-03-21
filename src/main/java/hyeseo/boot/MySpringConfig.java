@@ -38,7 +38,7 @@ public class MySpringConfig {
     @Bean
     public JTAddressService jtAddressService(){
         //return new JdbcTemplateAddressService(jtAddressRepository()); //JdbcTemplate
-        //return new MybatisMariaAddressService(addressMapper); //Mybatis
-        return new JpaMariaJTAddressService(jtAddressRepository()); //JPA
+        return new MybatisMariaAddressService(addressMapper); //Mybatis
+        //return new JpaMariaJTAddressService(jtAddressRepository()); //JPA
     }
 }
