@@ -20,6 +20,31 @@ public class AuthorServiceImpl implements AuthorService {
     private final AuthorRepository authorRepository;
 
     @Override
+    public Author insert(Author author) {
+        return null;
+    }
+
+    @Override
+    public List<Author> getAuthors() {
+        return List.of();
+    }
+
+    @Override
+    public Optional<Author> getAuthor(Long authorId) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<Author> update(Long authorId, String newName) {
+        return Optional.empty();
+    }
+
+    @Override
+    public void delete(Long authorId) {
+
+    }
+
+    @Override
     public List<Author> findAllAuthors() {
         return authorRepository.findAll();
     }
