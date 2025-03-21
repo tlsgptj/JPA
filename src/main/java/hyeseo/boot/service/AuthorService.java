@@ -9,6 +9,16 @@ import java.util.List;
 import java.util.Optional;
 
 public interface AuthorService {
+    Author insert(Author author);
+
+    List<Author> getAuthors();
+
+    Optional<Author> getAuthor(Long authorId);
+
+    Optional<Author> update(Long authorId, String newName);
+
+    void delete(Long authorId);
+
     List<Author> findAllAuthors();
 
     // 페이징
