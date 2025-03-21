@@ -9,11 +9,11 @@ import lombok.NoArgsConstructor;
 @Getter
 @Table(name = "fileup")
 public class FileUp {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "file_id")
     private long id;
-
     private String orgnm;
     private String savednm;
     private String savedpath;

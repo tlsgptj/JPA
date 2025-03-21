@@ -3,10 +3,10 @@
 
 <body style="text-align: center">
     <h2>index.jsp</h2><br/>
-    <a href="address/list.do">주소록(JDBC)</a>
-    <a href="address_jt/list.do">주소록(JDBCTemplate|Spring|MyBatis|JPA)</a>
-    <a href="th/address_jt/list">주소록(JDBC:타임리프)</a>
+    <a href="address/list.do">주소록(JDBC)</a><br/>
+    <a href="address_jt/list.do">주소록(JDBCTemplate|Spring|MyBatis|JPA)</a><br/>
+    <a href="th/address_jt/list">주소록(JDBC:타임리프)</a><br/>
     <a href="file/upload.do">파일폼</a><br/>
 
-    <a href="th/address_jt/list.do">주소록(JDBC:타임리프)</a>
+    <a href="th/address_jt/list.do">주소록(JDBC:타임리프)</a><br/>
 </body>

@@ -42,12 +42,14 @@ public class FileServiceImpl implements FileService {
 
         return savedFile.getId();
     }
+
     //(2) 파일 리스팅
     @Override
     public List<FileUp> getFileUpAll() {
         List<FileUp> fileUps =  fileRepository.findAll();
         return fileUps;
     }
+
     //(3) 파일 다운로드
     @Override
     public FileUp getFileUp(long file_id) {
